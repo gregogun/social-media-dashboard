@@ -7,14 +7,68 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.bg-box {
+    height: 250px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #a4a4a715;
+    border-radius: 0px 0px 50px 50px;
+    box-sizing: border-box;
+}
+
 .dashboard-header {
-    margin: 0 15px;
+    margin: 0 35px;
 }
 
 .dashboard-header p.hr {
     padding-bottom: 1.5rem;
     border-bottom: 2px #63687e solid;
 }
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+    top: 140px;
+    z-index: 1;
+    width: 50px;
+}
+
+.checkbox:checked + label .ball {
+    transform: translateX(-20px);
+}
+
+.label {
+    background-color:  hsl(230, 22%, 74%);
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px 2px 5px 6px;
+    height: 17px;
+    width: 42px;
+}
+
+.ball {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    height: 21px;
+    width: 21px;
+    transition: transform 200ms linear;
+}
+
 
 p.hr {
     color: hsl(228, 12%, 44%);
@@ -31,7 +85,7 @@ p {
 .social-main {
     display: grid;
     gap: 2rem;
-    margin: 0 15px;
+    margin: 0 25px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     
 }
@@ -130,15 +184,13 @@ p {
 .dark-mode {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
     color: hsl(228, 12%, 44%);
 }
 
 .dark-toggle {
-    width: 60px;
-    height: 30px;
-    margin-top: 10px;
-    margin-right: 10px;
+
 }
 
 .overview-header {
@@ -154,8 +206,133 @@ p {
 
 .card2 {
     width: 100%;
-    height: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
     background-color: hsl(227, 47%, 96%);
-    border-radius: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
+.upper-card {
+    width: 100%;
+    height: 50px;
+    margin: 7px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(228, 12%, 44%);
+}
+
+.upper-card p {
+    padding: 15px 0px 0px 20px;
+}
+
+.upper-card svg {
+    margin-top: 15px;
+    padding-right: 45px;
+}
+
+
+.lower-card {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lower-card .inc-dec {
+    width: 70px;
+    height: 25px;
+    padding-top: 10px; 
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.lower-card #inc-dec {
+    margin-right: 5px;
+    padding-bottom: 10px;
+}
+
+#overview-count {
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+@media screen and (min-width: 600px) {
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.card2 {
+    align-items: center;
+}
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .social-main {
+        display: grid;
+        gap: 2rem;
+        margin: 0 25px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        
+    }
+
+    .social-overview {
+        display: grid;
+        gap: 1rem;
+        margin: 20px 15px;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+}
+
+
+
+/* @media screen and (min-width: 992px) {
+    
+} */
+
+
+
+@media screen and (min-width: 1200px) {
+
+    .social-main {
+        display: grid;
+        gap: 2rem;
+        margin: 0 25px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        
+    }
+
+    .social-overview {
+        display: grid;
+        gap: 1rem;
+        margin: 20px 25px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+    .social-overview {
+        display: grid;
+        gap: 1rem;
+        margin: 20px 25px;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+
+}
