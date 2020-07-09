@@ -352,6 +352,10 @@ a:active {
     display: flex;
 }
 
+.dashboard-header p.hr {
+    border-bottom: none;
+}
+
 
 }
 
