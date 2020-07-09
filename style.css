@@ -116,6 +116,14 @@ a:visited {
     color: black;
 }
 
+a:link {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
 .social-main {
     display: grid;
     gap: 2rem;
