@@ -5,6 +5,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    color: black;
+}
+
+body.dark {
+    background-color: hsl(230, 17%, 14%);
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    color: whitesmoke;
 }
 
 .container {
@@ -25,8 +35,12 @@ body {
     box-sizing: border-box;
 }
 
+.bg-box-dark {
+    background-color: hsl(232, 19%, 15%);
+}
+
 .dashboard-header {
-    margin: 0 35px;
+    margin: 20px 35px;
 }
 
 .dashboard-header p.hr {
@@ -43,7 +57,7 @@ body {
 }
 
 .checkbox:checked + label .ball {
-    transform: translateX(-20px);
+    transform: translateX(-22px);
 }
 
 .label {
@@ -59,6 +73,10 @@ body {
     width: 42px;
 }
 
+.darklabel {
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));    
+}
+
 .ball {
     background-color: hsl(0, 0%, 100%);
     border-radius: 50%;
@@ -70,6 +88,10 @@ body {
 }
 
 
+.balldark {
+    background-color: hsl(230, 17%, 14%);
+}
+
 p.hr {
     color: hsl(228, 12%, 44%);
 }
@@ -80,6 +102,18 @@ h1, h2 {
 
 p {
     font-weight: 700;
+}
+
+.pdark {
+    color: hotpink;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
 }
 
 .social-main {
@@ -98,6 +132,20 @@ p {
     border-radius: 6px;
     display: flex;
     flex-direction: column;
+}
+
+.card1:hover {
+    background-color: hsl(224, 22%, 90%);
+    transition-duration: 350ms;
+}
+
+.card1dark {
+    background-color: hsl(228, 28%, 20%);
+    color: whitesmoke;
+}
+
+.card1dark:hover {
+    background-color: hsl(230, 27%, 26%);
 }
 
 #card1-2 {
@@ -189,10 +237,6 @@ p {
     color: hsl(228, 12%, 44%);
 }
 
-.dark-toggle {
-
-}
-
 .overview-header {
     margin: 45px 15px 0px 15px;
 }
@@ -212,6 +256,20 @@ p {
     background-color: hsl(227, 47%, 96%);
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.card2:hover {
+    background-color: hsl(224, 22%, 90%);
+    transition-duration: 350ms;
+}
+
+.card2dark {
+    background-color: hsl(228, 28%, 20%);
+    color: whitesmoke;
+}
+
+.card2dark:hover {
+    background-color: hsl(230, 27%, 26%);
 }
 
 .upper-card {
@@ -277,6 +335,16 @@ p {
     align-items: center;
 }
 
+.dark-mode {
+    width: 30%;
+    margin-left: auto;
+}
+
+.dashboard-header {
+    display: flex;
+}
+
+
 }
 
 
@@ -323,6 +391,11 @@ p {
         margin: 20px 25px;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
+
+    .dark-mode {
+        width: 20%;
+        margin-left: auto;
+    }
     
 }
 
@@ -332,7 +405,12 @@ p {
         display: grid;
         gap: 1rem;
         margin: 20px 25px;
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
+
+    .dark-mode {
+        width: 13%;
+        margin-left: auto;
     }
 
 }
